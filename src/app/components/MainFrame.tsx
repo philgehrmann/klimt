@@ -4,20 +4,6 @@ import { TypeAnimation } from "react-type-animation";
 export default function Mainframe() {
   const video = useRef<HTMLVideoElement>(null);
 
-  const playVideo = () => {
-    setTimeout(() => {
-      video.current?.play();
-      console.log("asd");
-    }, 2000);
-  };
-
-  useEffect(() => {
-    playVideo();
-    const timeoutId = setTimeout(() => {
-      playVideo();
-    }, 1000);
-  });
-
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-[100vh] overflow-y-hidden">
