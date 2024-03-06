@@ -2,7 +2,7 @@
 import { useRef, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 export default function Mainframe() {
-  const video = useRef(null);
+  const video = useRef<HTMLAudioElement>(null);
 
   const playVideo = () => {
     video.current && video.current.play();
