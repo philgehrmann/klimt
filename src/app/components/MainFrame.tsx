@@ -5,7 +5,10 @@ export default function Mainframe() {
   const video = useRef<HTMLVideoElement>(null);
 
   const playVideo = () => {
-    video.current && video.current.play();
+    setTimeout(() => {
+      video.current?.play();
+      console.log("asd");
+    }, 2000);
   };
 
   useEffect(() => {
