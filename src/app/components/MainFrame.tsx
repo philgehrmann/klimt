@@ -4,7 +4,7 @@ export default function Mainframe() {
   return (
     <section>
       <div className="grid grid-cols-1 lg:grid-cols-2 h-[100vh] overflow-y-hidden">
-        <div className="text-white grid px-12 lg:px-12 lg:pt-0 min-h-[400px] bg-yellow self-center justify-self-start lg:min-h-auto relative z-[150]">
+        <div className="text-white grid px-12 pt-12 lg:px-12 lg:pt-0 min-h-[430px] bg-yellow self-center justify-self-start lg:min-h-auto relative z-[150]">
           <div className="lg:min-w-[500px]">
             <h3 className="text-white ">Ihre Profis für</h3>
             <TypeAnimation

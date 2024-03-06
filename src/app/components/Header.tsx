@@ -1,7 +1,7 @@
 export default function Header() {
   return (
     <header>
-      <div className="px-6 lg:px-12 py-6 grid grid-cols-[50%_50%] lg:grid-cols-[20%_60%_20%] items-center fixed w-full z-[200]">
+      <div className="px-6 lg:px-12 py-6 pr-2 grid grid-cols-[50%_50%] lg:grid-cols-[20%_60%_20%] items-center fixed w-full z-[200]">
         <div className="text-[14px] uppercase text-white">
           Klimt - Werbetechnik
         </div>
@@ -14,7 +14,11 @@ export default function Header() {
           </div>
         </div>
         <div className="self-center block lg:hidden justify-self-end">
-          nav mo
+          <div className="nav-btn p-4 hover:rounded-[10px] cursor-pointer hover:bg-lightblack">
+            <p className="w-[35px] bg-white h-[2px] rounded-[2px]"></p>
+            <p className="w-[35px] bg-white h-[2px] rounded-[2px] mt-2"></p>
+            <p className="w-[35px] bg-white h-[2px] rounded-[2px] mt-2"></p>
+          </div>
         </div>
       </div>
     </header>
