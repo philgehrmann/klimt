@@ -43,12 +43,11 @@ export default function Mainframe() {
 
         <div className="bg-white relative w-full lg:border-l-[1px] lg:border-white z-1 ">
           <video
-            ref={video}
             autoPlay
             muted
             loop
             className="cover absolute left-0 right-0 w-full -translate-y-[40%] lg:-translate-y-[20%]"
-            src="https://vod-progressive.akamaized.net/exp=1709732346~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F2573%2F21%2F537868903%2F2547815848.mp4~hmac=564956a87b0a01c63ba3478236f8031d539329a758adbc03921c35bc96a523a5/vimeo-prod-skyfire-std-us/01/2573/21/537868903/2547815848.mp4"
+            src="https://player.vimeo.com/external/552791228.sd.mp4?s=2178f9011ab3a8d5b5dc8cecf367b7e8940d1a2f&profile_id=165&oauth2_token_id=57447761"
           />
         </div>
       </div>
