@@ -2,13 +2,14 @@
 import { useRef, useEffect } from "react";
 import { TypeAnimation } from "react-type-animation";
 export default function Mainframe() {
-  const video = useRef<HTMLAudioElement>(null);
+  const video = useRef<HTMLVideoElement>(null);
 
   const playVideo = () => {
     video.current && video.current.play();
   };
 
   useEffect(() => {
+    playVideo();
     const timeoutId = setTimeout(() => {
       playVideo();
     }, 1000);
