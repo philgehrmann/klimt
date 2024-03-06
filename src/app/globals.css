@@ -3,31 +3,68 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-rgb: #fecd28;
+  --background-start-rgb: #fecd28;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
+    --background-start-rgb: #fecd28;
     --background-end-rgb: 0, 0, 0;
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: var(--background-start-rgb);
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+body {
+  animation: fadeInAnimation ease 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h1 {
+  font-size: clamp(2rem, 1.3421rem + 2.807vw, 4.5rem);
+}
+
+h3 {
+  font-size: clamp(1.75rem, 1.0526rem + 0.8421vw, 2rem);
+}
+
+.h1 {
+  font-size: clamp(2.2rem, 0.0658rem + 5.0526vw, 7.5rem);
+}
+
+.p,
+p {
+  font-size: clamp(1rem, 1.0526rem + 0.8421vw, 1.4rem);
+}
+@layer components {
+  .btn {
+    @apply px-6 py-2 bg-yellow text-white;
+  }
+  .btn--light {
+    @apply relative px-6 lg:px-12 py-4 lg:py-6 bg-white text-yellow rounded-lg mt-6 mb-2 text-[18px] uppercase text-center cursor-pointer max-w-[300px] block drop-shadow-sm;
+  }
+  .btn--light::after {
+    content: "";
+    @apply absolute drop-shadow-[20px];
   }
 }
